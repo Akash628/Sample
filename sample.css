@@ -1,0 +1,233 @@
+/* body {
+    background: rgb(32, 32, 36);
+}
+svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 99vh;
+} */
+
+
+/* Global CSS and Sass mixins defined in codepen.io/jsulpis/pen/ExdxLgM */
+/* 
+.movie-card {
+    --transition-duration: 700ms;
+    color: white;
+    position: relative;
+    border-radius: 0.6em;
+    overflow: hidden;
+    font-size: 120%; 
+    height: min(21em, 90vh);
+    max-width: 90vw;
+    aspect-ratio: 16/9;
+    box-shadow: var(--shadow-lg), var(--shadow-lg), var(--shadow-lg);
+    transition: transform var(--transition-duration);
+  
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at 80% -150%,
+        transparent 60%,
+        rgba(0, 0, 0, 0.5)
+      );
+      transition: box-shadow var(--transition-duration);
+      mix-blend-mode: overlay;
+    }
+  }
+  
+  img {
+    height: 100%;
+    width: 100%;
+    transition: transform var(--transition-duration);
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .content {
+    z-index: 1;
+    position: absolute;
+    bottom: min(2.5em, 6vmin);
+    left: min(3em, 8vmin);
+    right: min(3em, 8vmin);
+    text-align: left;
+    transition: transform var(--transition-duration) var(--ease-in-out);
+  
+    > * {
+      position: relative;
+      will-change: transform;
+    }
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    color: inherit;
+    margin: 0;
+  }
+  
+  .infos {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #eee;
+    display: flex;
+    gap: 0.35em;
+    align-items: flex-end;
+  
+    span {
+      line-height: 1;
+    }
+  }
+  
+  .synopsis {
+    font-size: 0.8em;
+    line-height: 1.4;
+    margin-block: 0.75em;
+    transition-delay: calc(var(--transition-duration) / 8);
+    transition-property: opacity, transform;
+    transition-duration: calc(var(--transition-duration) / 2);
+  }
+  
+  .icons {
+    display: flex;
+    gap: 0.5em;
+  
+    svg {
+      height: 1.2em;
+      width: auto;
+      transition-property: opacity, transform;
+      transition-duration: calc(var(--transition-duration) / 2);
+      transition-delay: 0s;
+    }
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.03);
+  
+    img {
+      transform: scale(1.03);
+    }
+  
+    .synopsis {
+      transition-duration: var(--transition-duration);
+      transition-delay: calc(var(--transition-duration) / 3);
+    }
+  
+    .icons svg {
+      &:nth-child(1) {
+        transition-delay: calc(var(--transition-duration) / 1.8);
+      }
+      &:nth-child(2) {
+        transition-delay: calc(var(--transition-duration) / 1.6);
+      }
+      &:nth-child(3) {
+        transition-delay: calc(var(--transition-duration) / 1.4);
+      }
+    }
+  }
+  
+  .movie-card:not(:hover) {
+    .synopsis {
+      opacity: 0;
+      transform: translateY(1em);
+    }
+    .icons svg {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    .content {
+      transform: translateY(calc(100% - 4.5em));
+    }
+  } */
+
+
+
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    height: 100vh;
+    background: linear-gradient(#01e26e, #72ffb4);
+  }
+  .container {
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    max-width: 600px;
+    min-width: 350px;
+    padding: 60px 30px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  label {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  input {
+    margin-bottom: 20px;
+    border: none;
+    font-size: 20px;
+    border-bottom: 2px solid #585858;
+    color: #585858;
+    padding: 2px 15px;
+  }
+  input:focus {
+    outline: none;
+    border-bottom: 2.4px solid #01e26e;
+  }
+  .input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .input-wrapper input {
+    width: 100%;
+  }
+  .time-wrapper input {
+    width: 60%;
+  }
+  select {
+    width: 35%;
+    border: 1px solid #585858;
+    font-size: 20px;
+    margin-left: 3%;
+    padding: 8px 0;
+    border-radius: 5px;
+  }
+  button {
+    display: block;
+    background-color: #01e26e;
+    border: none;
+    color: #ffffff;
+    margin: 20px auto 0 auto;
+    padding: 15px 40px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+  #result {
+    background-color: #c6ffe2;
+    margin-top: 30px;
+    color: #585858;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  #result div {
+    margin-bottom: 10px;
+  }
+  #result span {
+    color: #000000;
+    font-weight: 500;
+  }
